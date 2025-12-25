@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب حامل مغناطيسي قوي K007</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* تعيين الخطوط والأساسيات */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a1a0a 0%, #091209 50%, #0c150c 100%);
+            color: #a4f0d7;
+            line-height: 1.6;
+            padding: 15px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(108, 224, 132, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(82, 194, 68, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10px;
+            animation: fadeIn 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* شريط العنوان المتنقل */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, #143214 0%, #0e1c0c 100%);
+            border-radius: 0 0 15px 15px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(108, 224, 132, 0.1);
+            border: 1px solid #2a4a2a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: slideDown 0.5s ease;
+        }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #8de361;
+            text-shadow: 0 0 10px rgba(141, 227, 97, 0.3);
+            position: relative;
+            padding-right: 15px;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 70%;
+            background: linear-gradient(to bottom, #52c244, #6ce084);
+            border-radius: 2px;
+        }
+        
+        .phone-contact {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(36, 72, 54, 0.8) 0%, rgba(52, 104, 78, 0.8) 100%);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid #6ce084;
+            box-shadow: 
+                0 0 15px rgba(108, 224, 132, 0.2),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phone-contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(255, 255, 255, 0.1) 50%, 
+                transparent 70%);
+            animation: shine 3s infinite linear;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .phone-contact i {
+            color: #6ce084;
+            filter: drop-shadow(0 0 5px rgba(108, 224, 132, 0.5));
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        /* قسم العرض البصري */
+        .visual-section {
+            flex: 1.2;
+            min-width: 0;
+        }
+        
+        .image-gallery {
+            background: linear-gradient(135deg, #143214 0%, #0e1c0c 100%);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(108, 224, 132, 0.1);
+            border: 1px solid #2a4a2a;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .image-gallery:hover {
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.6),
+                0 0 35px rgba(108, 224, 132, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .main-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 400px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(10, 18, 9, 0.5) 0%, rgba(14, 28, 12, 0.8) 100%);
+            touch-action: pan-y pinch-zoom;
+            border: 1px solid #364836;
+            box-shadow: 
+                inset 0 2px 10px rgba(0, 0, 0, 0.5),
+                0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .main-image {
+            width: 400px;
+            height: 400px;
+            object-fit: contain;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+        }
+        
+        .main-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* أزرار التنقل بين الصور */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, rgba(36, 72, 54, 0.9) 0%, rgba(52, 104, 78, 0.9) 100%);
+            color: #fff;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 10;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.3),
+                0 0 10px rgba(108, 224, 132, 0.2);
+            border: 1px solid #6ce084;
+        }
+        
+        .nav-btn:hover {
+            background: linear-gradient(135deg, rgba(108, 224, 132, 0.9) 0%, rgba(82, 194, 68, 0.9) 100%);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 
+                0 6px 20px rgba(0, 0, 0, 0.4),
+                0 0 15px rgba(108, 224, 132, 0.4);
+        }
+        
+        .prev-btn {
+            right: 10px;
+        }
+        
+        .next-btn {
+            left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+            }
+            
+            .main-image-container {
+                height: 300px;
+            }
+            
+            .main-image {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        
+        .image-thumbnails {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 5px 0;
+        }
+        
+        .thumbnail {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0.8;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .thumbnail::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(108, 224, 132, 0.2) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .thumbnail {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .thumbnail {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        
+        .thumbnail:hover {
+            opacity: 1;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.3),
+                0 0 10px rgba(108, 224, 132, 0.3);
+        }
+        
+        .thumbnail:hover::before {
+            opacity: 1;
+        }
+        
+        .thumbnail.active {
+            border-color: #6ce084;
+            opacity: 1;
+            box-shadow: 
+                0 0 15px rgba(108, 224, 132, 0.4),
+                inset 0 0 10px rgba(108, 224, 132, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .thumbnail.active::before {
+            opacity: 1;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .thumbnail:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* قسم الطلب */
+        .order-section {
+            flex: 1;
+            min-width: 0;
+            position: sticky;
+            top: 100px;
+            align-self: flex-start;
+        }
+        
+        @media (max-width: 992px) {
+            .order-section {
+                position: static;
+                top: auto;
+            }
+        }
+        
+        .order-form {
+            background: linear-gradient(135deg, #143214 0%, #0e1c0c 100%);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(108, 224, 132, 0.1);
+            border: 1px solid #2a4a2a;
+            transition: all 0.3s ease;
+        }
+        
+        .order-form:hover {
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.6),
+                0 0 35px rgba(108, 224, 132, 0.2);
+        }
+        
+        .form-title {
+            color: #8de361;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #406255;
+            position: relative;
+            text-shadow: 0 0 10px rgba(141, 227, 97, 0.3);
+        }
+        
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to left, #52c244, #6ce084);
+            border-radius: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        @media (min-width: 768px) {
+            .form-title {
+                font-size: 1.7rem;
+            }
+        }
+        
+        .product-info {
+            background: linear-gradient(135deg, rgba(36, 72, 54, 0.6) 0%, rgba(52, 104, 78, 0.6) 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #6ce084;
+            text-align: center;
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #52c244, #6ce084);
+        }
+        
+        .product-name {
+            color: #a2eb84;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            text-shadow: 0 0 5px rgba(162, 235, 132, 0.3);
+        }
+        
+        @media (min-width: 768px) {
+            .product-name {
+                font-size: 1.3rem;
+            }
+        }
+        
+        .discount-badge {
+            background: linear-gradient(135deg, #52c244 0%, #6ce084 100%);
+            color: #091209;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-right: 8px;
+            box-shadow: 
+                0 4px 10px rgba(82, 194, 68, 0.3),
+                0 0 10px rgba(108, 224, 132, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 10px rgba(82, 194, 68, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 6px 15px rgba(82, 194, 68, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 4px 10px rgba(82, 194, 68, 0.3); }
+        }
+        
+        .stock-status {
+            background: linear-gradient(135deg, rgba(108, 224, 132, 0.15) 0%, rgba(82, 194, 68, 0.15) 100%);
+            border: 1px solid #6ce084;
+            border-radius: 8px;
+            padding: 8px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            box-shadow: 
+                inset 0 1px 1px rgba(255, 255, 255, 0.1),
+                0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            color: #a4f0d7;
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            background: linear-gradient(135deg, #25361a 0%, #1a2914 100%);
+            border: 1px solid #587d68;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                inset 0 2px 5px rgba(0, 0, 0, 0.3),
+                0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #6ce084;
+            box-shadow: 
+                0 0 0 2px rgba(108, 224, 132, 0.3),
+                inset 0 2px 5px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* تنسيق القائمة المنسدلة للولايات */
+        .state-select {
+            width: 100%;
+            padding: 12px 14px;
+            background: linear-gradient(135deg, #25361a 0%, #1a2914 100%);
+            border: 1px solid #587d68;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236ce084' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 14px center;
+            background-size: 12px;
+            padding-left: 40px;
+            text-align: right;
+            box-shadow: 
+                inset 0 2px 5px rgba(0, 0, 0, 0.3),
+                0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        
+        .state-select:focus {
+            outline: none;
+            border-color: #6ce084;
+            box-shadow: 
+                0 0 0 2px rgba(108, 224, 132, 0.3),
+                inset 0 2px 5px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .state-select option {
+            background-color: #25361a;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        /* قسم الكمية والسعر */
+        .quantity-section {
+            background: linear-gradient(135deg, rgba(36, 72, 54, 0.6) 0%, rgba(52, 104, 78, 0.6) 100%);
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
+            border: 1px solid #6ce084;
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        
+        .quantity-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(255, 255, 255, 0.05) 50%, 
+                transparent 70%);
+            pointer-events: none;
+            animation: shine 3s infinite linear;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .quantity-btn {
+            background: linear-gradient(135deg, #3a5944 0%, #2a3f2f 100%);
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 
+                0 4px 10px rgba(0, 0, 0, 0.3),
+                0 0 5px rgba(108, 224, 132, 0.2);
+            border: 1px solid #587d68;
+        }
+        
+        @media (min-width: 768px) {
+            .quantity-btn {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        .quantity-btn:hover {
+            background: linear-gradient(135deg, #52c244 0%, #3a5944 100%);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 
+                0 6px 15px rgba(0, 0, 0, 0.4),
+                0 0 10px rgba(108, 224, 132, 0.4);
+            border-color: #6ce084;
+        }
+        
+        .quantity-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+        
+        .quantity-display {
+            font-size: 1.4rem;
+            color: #8de361;
+            font-weight: bold;
+            min-width: 50px;
+            text-align: center;
+            text-shadow: 0 0 5px rgba(141, 227, 97, 0.3);
+            padding: 5px 10px;
+            background: rgba(10, 18, 9, 0.5);
+            border-radius: 8px;
+            border: 1px solid #587d68;
+        }
+        
+        /* تصميم السعر المحسن */
+        .price-calc {
+            background: linear-gradient(135deg, rgba(10, 18, 9, 0.8) 0%, rgba(14, 28, 12, 0.8) 100%);
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 15px;
+            text-align: center;
+            border: 1px solid #6ce084;
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-info {
+            color: #a4f0d7;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price-label {
+            font-weight: 500;
+        }
+        
+        .price-value {
+            color: #8de361;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(141, 227, 97, 0.3);
+        }
+        
+        .total-price-container {
+            background: linear-gradient(135deg, rgba(52, 104, 78, 0.3) 0%, rgba(108, 224, 132, 0.1) 100%);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #6ce084;
+            position: relative;
+            overflow: hidden;
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 10px rgba(108, 224, 132, 0.3); }
+            to { box-shadow: 0 0 20px rgba(108, 224, 132, 0.6); }
+        }
+        
+        .total-price-label {
+            color: #c4f8e4;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .total-price {
+            font-size: 2rem;
+            color: #8de361;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(141, 227, 97, 0.5);
+            animation: pricePulse 1s ease;
+        }
+        
+        @keyframes pricePulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .shipping-price {
+            color: #83ecce;
+            font-size: 0.9rem;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid #406255;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #52c244 0%, #6ce084 100%);
+            color: #091209;
+            border: none;
+            padding: 16px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-top: 15px;
+            box-shadow: 
+                0 5px 20px rgba(82, 194, 68, 0.4),
+                0 0 15px rgba(108, 224, 132, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 768px) {
+            .submit-btn {
+                padding: 18px;
+                font-size: 1.3rem;
+            }
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #3a5944 0%, #52c244 100%);
+            transform: translateY(-5px);
+            box-shadow: 
+                0 10px 25px rgba(82, 194, 68, 0.6),
+                0 0 20px rgba(108, 224, 132, 0.5);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .spinner {
+            border: 4px solid #25361a;
+            border-top: 4px solid #52c244;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 8px;
+            box-shadow: 0 0 10px rgba(82, 194, 68, 0.5);
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* بقية الأنماط تبقى كما هي مع إضافة التعديلات البسيطة */
+        
+        /* رسالة التأكيد */
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(36, 72, 54, 0.6) 0%, rgba(52, 104, 78, 0.6) 100%);
+            border-radius: 10px;
+            padding: 25px 20px;
+            margin-top: 20px;
+            border: 2px solid #6ce084;
+            animation: fadeIn 0.5s ease;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(108, 224, 132, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .confirmation-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(255, 255, 255, 0.1) 50%, 
+                transparent 70%);
+            pointer-events: none;
+            animation: shine 3s infinite linear;
+        }
+        
+        /* شارات الضمان */
+        .guarantee-badges {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        @media (min-width: 768px) {
+            .guarantee-badges {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        .guarantee-badge {
+            background: linear-gradient(135deg, rgba(108, 224, 132, 0.15) 0%, rgba(82, 194, 68, 0.15) 100%);
+            border: 1px solid #6ce084;
+            border-radius: 10px;
+            padding: 20px 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 
+                0 5px 15px rgba(0, 0, 0, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+        
+        .guarantee-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 10px 25px rgba(0, 0, 0, 0.4),
+                0 0 15px rgba(108, 224, 132, 0.3),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            border-color: #8de361;
+        }
+        
+        /* قسم المميزات بعد الاستمارة */
+        .detailed-features {
+            background: linear-gradient(135deg, #143214 0%, #0e1c0c 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(108, 224, 132, 0.1);
+            border: 1px solid #2a4a2a;
+            transition: all 0.3s ease;
+        }
+        
+        .detailed-features:hover {
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.6),
+                0 0 35px rgba(108, 224, 132, 0.2);
+        }
+        
+        /* تحسينات للاستجابة على الهواتف */
+        @media (max-width: 576px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 0 5px;
+            }
+            
+            .sticky-header {
+                padding: 12px 15px;
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+            }
+            
+            .logo::after {
+                display: none;
+            }
+            
+            .phone-contact {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+            
+            .main-image-container {
+                height: 250px;
+            }
+            
+            .main-image {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .total-price {
+                font-size: 1.7rem;
+            }
+            
+            .image-gallery,
+            .order-form,
+            .detailed-features {
+                padding: 15px;
+            }
+            
+            .quantity-section {
+                padding: 15px;
+            }
+            
+            .state-select {
+                padding: 10px 12px;
+                font-size: 0.95rem;
+                padding-left: 36px;
+                background-position: left 12px center;
+            }
+            
+            .guarantee-badges {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* إضافة تأثيرات للظهور التدريجي */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* تأثيرات عند التمرير */
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .scroll-animation.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* تحسينات التمرير السلس */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* تحسينات للأجهزة التي تدعم Hover */
+        @media (hover: hover) {
+            .quantity-btn:hover,
+            .submit-btn:hover,
+            .thumbnail:hover,
+            .nav-btn:hover,
+            .guarantee-badge:hover {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+        
+        /* تحسينات للأجهزة التي لا تدعم Hover */
+        @media (hover: none) {
+            .quantity-btn:active,
+            .submit-btn:active,
+            .thumbnail:active,
+            .nav-btn:active {
+                transform: scale(0.95);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- شريط العنوان المتنقل -->
+        <header class="sticky-header">
+            <div class="logo">حامل مغناطيسي قوي K007</div>
+            <div class="phone-contact">
+                <i class="fas fa-bolt"></i>
+                <span>🔥 خصم 28% 🔥</span>
+            </div>
+        </header>
+        
+        <div class="content-wrapper">
+            <!-- قسم العرض البصري -->
+            <section class="visual-section">
+                <div class="image-gallery scroll-animation">
+                    <div class="main-image-container" id="mainImageContainer">
+                        <button class="nav-btn prev-btn" id="prevBtn">←</button>
+                        <img id="mainImage" class="main-image" src="https://i.ibb.co/YVrxsfw/2.png" alt="حامل مغناطيسي قوي K007">
+                        <button class="nav-btn next-btn" id="nextBtn">→</button>
+                    </div>
+                    
+                    <div class="image-thumbnails">
+                        <div class="thumbnail active" data-img="https://i.ibb.co/YVrxsfw/2.png">
+                            <img src="https://i.ibb.co/YVrxsfw/2.png" alt="حامل مغناطيسي قوي K007 - الصورة 1">
+                        </div>
+                        <div class="thumbnail" data-img="https://i.ibb.co/CKYs4Gnd/3.png">
+                            <img src="https://i.ibb.co/CKYs4Gnd/3.png" alt="حامل مغناطيسي قوي K007 - الصورة 2">
+                        </div>
+                        <div class="thumbnail" data-img="https://i.ibb.co/3m8XGvY7/4.png">
+                            <img src="https://i.ibb.co/3m8XGvY7/4.png" alt="حامل مغناطيسي قوي K007 - الصورة 3">
+                        </div>
+                        <div class="thumbnail" data-img="https://i.ibb.co/67T6hpZF/image.jpg">
+                            <img src="https://i.ibb.co/67T6hpZF/image.jpg" alt="حامل مغناطيسي قوي K007 - الصورة 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- قسم نموذج الطلب -->
+            <section class="order-section">
+                <div class="order-form scroll-animation">
+                    <h2 class="form-title">🚀 اطلب الآن - حامل مغناطيسي قوي K007</h2>
+                    
+                    <div class="product-info">
+                        <div class="product-name">حامل مغناطيسي قوي K007</div>
+                        <div>
+                            <span class="discount-badge">سعر ممتاز 1500 دج.</span>
+                        </div>
+                        
+                        <div class="stock-status">
+                            <i class="fas fa-check-circle"></i>
+                            <span>متوفر في المخزون - اطلب الآن قبل نفاذ الكمية</span>
+                        </div>
+                    </div>
+                    
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="firstName">الاسم <span style="color: #8de361;">*</span></label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="أدخل اسمك">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">اللقب <span style="color: #8de361;">*</span></label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="أدخل لقبك">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="state">الولاية <span style="color: #8de361;">*</span></label>
+                            <select id="state" name="state" required class="state-select">
+                                <option value="" disabled selected>اختر ولايتك</option>
+                                <option value="M'Sila">M'Sila - 400 DA</option>
+                                <option value="Alger">Alger - 450 DA</option>
+                                <option value="Oran">Oran - 500 DA</option>
+                                <option value="Constantine">Constantine - 500 DA</option>
+                                <option value="Annaba">Annaba - 500 DA</option>
+                                <option value="Blida">Blida - 500 DA</option>
+                                <option value="Batna">Batna - 500 DA</option>
+                                <option value="Tamanrasset">Tamanrasset - 1500 DA</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city">البلدية <span style="color: #8de361;">*</span></label>
+                            <input type="text" id="city" name="city" required placeholder="أدخل بلديتك">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف <span style="color: #8de361;">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="مثال: 0550123456">
+                        </div>
+                        
+                        <div class="quantity-section">
+                            <label for="quantity">عدد الطلبيات <span style="color: #8de361;">*</span></label>
+                            <p style="color: #c4f8e4; font-size: 0.9rem; margin-top: 5px;">احصل على سعر خاص عند طلب أكثر من قطعة</p>
+                            
+                            <div class="quantity-control">
+                                <button type="button" class="quantity-btn" id="decreaseQty">-</button>
+                                <div class="quantity-display" id="quantityDisplay">1</div>
+                                <input type="hidden" id="quantity" name="quantity" value="1">
+                                <button type="button" class="quantity-btn" id="increaseQty">+</button>
+                            </div>
+                            
+                            <div class="price-calc">
+                                <div class="price-info">
+                                    <span class="price-label">سعر القطعة:</span>
+                                    <span class="price-value" id="unitPrice">1500 DA</span>
+                                </div>
+                                <div class="price-info">
+                                    <span class="price-label">الكمية:</span>
+                                    <span class="price-value" id="quantityText">1</span>
+                                </div>
+                                <div class="price-info">
+                                    <span class="price-label">الشحن:</span>
+                                    <span class="price-value" id="shippingText">اختر الولاية</span>
+                                </div>
+                                
+                                <div class="total-price-container">
+                                    <div class="total-price-label">المبلغ الإجمالي</div>
+                                    <div class="total-price" id="totalPrice">0.00 DA</div>
+                                </div>
+                                
+                                <div class="shipping-price" id="shippingPrice">
+                                    التوصيل خلال 2-5 أيام عمل
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="loading" id="loading">
+                            <div class="spinner"></div>
+                            <p>جاري إرسال الطلب...</p>
+                        </div>
+                        
+                        <!-- رسالة تأكيد الطلب -->
+                        <div class="confirmation-message" id="confirmationMessage">
+                            <div class="check-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3 class="confirmation-title">تم تأكيد طلبك بنجاح! ✓</h3>
+                            <p class="confirmation-text">شكراً لك على طلبك. سيتم التواصل معك خلال 24 ساعة لتأكيد الطلب وتحديد موعد التوصيل.</p>
+                            <div style="color: #8de361; font-weight: bold; margin-top: 15px;">
+                                <i class="fas fa-shipping-fast" style="margin-left: 5px;"></i>
+                                التوصيل خلال 2-5 أيام عمل
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>تأكيد الطلب الآن</span>
+                        </button>
+                        
+                        <div style="text-align: center; margin-top: 12px; color: #83ecce; font-size: 0.85rem;">
+                            <i class="fas fa-lock" style="margin-left: 5px;"></i>
+                            <span>بياناتك محمية ولن نشاركها مع طرف ثالث</span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        
+        <!-- قسم المميزات التفصيلية -->
+        <div class="detailed-features scroll-animation">
+            <h3 class="detailed-features-title">🔧 مميزات الحامل المغناطيسي K007 بالتفصيل</h3>
+            <div class="feature-grid">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-magnet"></i>
+                    </div>
+                    <h4 class="feature-title">قوة مغناطيسية فائقة</h4>
+                    <p class="feature-desc">مغناطيس نيوديميوم قوي يثبت هاتفك بشكل آمن حتى على الطرق الوعرة، ولا يسمح بسقوط الهاتف حتى أثناء القيادة بسرعات عالية.</p>
+                </div>
+                
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4 class="feature-title">دوران 360 درجة</h4>
+                    <p class="feature-desc">يمكنك تدوير هاتفك في أي اتجاه، عمودي أو أفقي، لمشاهدة المحتوى أو استخدام التطبيقات بكل راحة.</p>
+                </div>
+                
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4 class="feature-title">تركيب سهل في السيارة</h4>
+                    <p class="feature-desc">يتوافق مع جميع أنواع السيارات، ويمكن تركيبه على الزجاج الأمامي أو على لوحة القيادة بسهولة وبدون حفر.</p>
+                </div>
+                
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="feature-title">مناسب لجميع الهواتف</h4>
+                    <p class="feature-desc">يعمل مع جميع هواتف الآيفون وسامسونج وهواوي وغيرها، بغض النظر عن حجم الهاتف أو سماكته.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- شارات الضمان -->
+        <div class="guarantee-badges">
+            <div class="guarantee-badge scroll-animation">
+                <i class="fas fa-undo-alt"></i>
+                <h4>إرجاع سهل</h4>
+                <p>خلال 7 أيام</p>
+            </div>
+            
+            <div class="guarantee-badge scroll-animation">
+                <i class="fas fa-shipping-fast"></i>
+                <h4>توصيل سريع</h4>
+                <p>لكل الولايات</p>
+            </div>
+        </div>
+        
+        <!-- تذييل الصفحة -->
+        <footer class="footer">
+            <p>© 2023 حامل مغناطيسي K007 - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+
+    <script>
+        // أسعار المنتج والشحن
+        const basePrice = 1500.00;
+        
+        const shippingPrices = {
+            "M'Sila": 400,
+            "Alger": 450,
+            "Oran": 500,
+            "Constantine": 500,
+            "Annaba": 500,
+            "Blida": 500,
+            "Batna": 500,
+            "Tamanrasset": 1500
+        };
+        
+        let quantity = 1;
+        let selectedState = "";
+        let shippingPrice = 0;
+        
+        const quantityDisplay = document.getElementById('quantityDisplay');
+        const quantityInput = document.getElementById('quantity');
+        const totalPriceElement = document.getElementById('totalPrice');
+        const shippingPriceElement = document.getElementById('shippingPrice');
+        const shippingTextElement = document.getElementById('shippingText');
+        const quantityTextElement = document.getElementById('quantityText');
+        const decreaseBtn = document.getElementById('decreaseQty');
+        const increaseBtn = document.getElementById('increaseQty');
+        const stateSelect = document.getElementById('state');
+        const loadingElement = document.getElementById('loading');
+        const submitBtn = document.getElementById('submitBtn');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        
+        // دالة حساب وتحديث السعر مع تأثيرات
+        function updatePrice() {
+            let productPrice = basePrice * quantity;
+            let totalPrice = productPrice;
+            
+            if (selectedState && shippingPrices[selectedState]) {
+                shippingPrice = shippingPrices[selectedState];
+                totalPrice += shippingPrice;
+                
+                shippingTextElement.textContent = `${shippingPrice} DA`;
+                shippingTextElement.style.color = '#6ce084';
+                
+                if (quantity === 1) {
+                    shippingPriceElement.textContent = `سعر المنتج: ${productPrice.toFixed(0)} DA + الشحن: ${shippingPrice} DA`;
+                } else {
+                    shippingPriceElement.textContent = `سعر ${quantity} قطع: ${productPrice.toFixed(0)} DA + الشحن: ${shippingPrice} DA`;
+                }
+            } else {
+                shippingPrice = 0;
+                shippingTextElement.textContent = "اختر الولاية";
+                shippingTextElement.style.color = '#a4f0d7';
+                
+                if (selectedState) {
+                    shippingPriceElement.textContent = "سعر الشحن غير محدد لهذه الولاية";
+                } else {
+                    shippingPriceElement.textContent = "اختر الولاية لحساب السعر الإجمالي";
+                }
+            }
+            
+            // تحديث العرض مع تأثيرات
+            quantityDisplay.textContent = quantity;
+            quantityInput.value = quantity;
+            quantityTextElement.textContent = quantity;
+            
+            // إضافة تأثير عند تغيير السعر
+            totalPriceElement.style.animation = 'none';
+            setTimeout(() => {
+                totalPriceElement.style.animation = 'pricePulse 1s ease';
+                totalPriceElement.textContent = totalPrice.toFixed(0) + ' DA';
+            }, 50);
+            
+            // تحديث نص زر الطلب
+            if (quantity > 1) {
+                submitBtn.querySelector('span').textContent = `طلب ${quantity} قطع الآن`;
+            } else {
+                submitBtn.querySelector('span').textContent = 'تأكيد الطلب الآن';
+            }
+        }
+        
+        // أحداث الأزرار للكمية
+        decreaseBtn.addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                updatePrice();
+            }
+        });
+        
+        increaseBtn.addEventListener('click', () => {
+            quantity++;
+            updatePrice();
+        });
+        
+        // استماع لتغيير الولاية
+        stateSelect.addEventListener('change', function() {
+            selectedState = this.value;
+            updatePrice();
+            
+            // تأثير عند اختيار الولاية
+            this.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+        
+        // التحكم في معرض الصور
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const mainImage = document.getElementById('mainImage');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const images = [
+            "https://i.ibb.co/YVrxsfw/2.png",
+            "https://i.ibb.co/CKYs4Gnd/3.png",
+            "https://i.ibb.co/3m8XGvY7/4.png",
+            "https://i.ibb.co/67T6hpZF/image.jpg"
+        ];
+        
+        let currentImageIndex = 0;
+        
+        function updateGallery(index) {
+            currentImageIndex = index;
+            if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+            if (currentImageIndex >= images.length) currentImageIndex = 0;
+            
+            // تأثير تغيير الصورة
+            mainImage.style.opacity = '0.3';
+            mainImage.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                mainImage.src = images[currentImageIndex];
+                mainImage.style.opacity = '1';
+                mainImage.style.transform = 'scale(1)';
+            }, 200);
+            
+            // تحديث الصور المصغرة
+            thumbnails.forEach((thumb, i) => {
+                if (i === currentImageIndex) {
+                    thumb.classList.add('active');
+                    thumb.style.transform = 'translateY(-5px) scale(1.1)';
+                } else {
+                    thumb.classList.remove('active');
+                    thumb.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }
+        
+        // أحداث أزرار التنقل
+        prevBtn.addEventListener('click', () => {
+            updateGallery(currentImageIndex - 1);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            updateGallery(currentImageIndex + 1);
+        });
+        
+        // أحداث الصور المصغرة
+        thumbnails.forEach((thumbnail, index) => {
+            thumbnail.addEventListener('click', function() {
+                updateGallery(index);
+            });
+        });
+        
+        // إضافة تأثيرات عند التمرير
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.scroll-animation');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+            
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach((element, index) => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 100;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }
+        
+        // استدعاء تأثيرات التمرير عند التحميل والتمرير
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+        
+        // دعم السحب باللمس
+        let touchStartX = 0;
+        const mainImageContainer = document.getElementById('mainImageContainer');
+        
+        mainImageContainer.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        mainImageContainer.addEventListener('touchend', function(e) {
+            const touchEndX = e.changedTouches[0].screenX;
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    updateGallery(currentImageIndex + 1);
+                } else {
+                    updateGallery(currentImageIndex - 1);
+                }
+            }
+        });
+        
+        // معالجة نموذج الطلب
+        document.getElementById('orderForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!selectedState) {
+                alert('يرجى اختيار ولايتك من القائمة');
+                stateSelect.focus();
+                return;
+            }
+            
+            const phoneInput = document.getElementById('phone').value.trim();
+            const phoneRegex = /^0[5-7][0-9]{8}$/;
+            const cleanPhone = phoneInput.replace(/\D/g, '');
+            
+            if (!phoneRegex.test(cleanPhone)) {
+                alert('يرجى إدخال رقم هاتف جزائري صحيح (10 أرقام تبدأ بـ 05 أو 06 أو 07)\nمثال: 0550123456');
+                document.getElementById('phone').focus();
+                document.getElementById('phone').select();
+                return;
+            }
+            
+            const requiredFields = ['firstName', 'lastName', 'city'];
+            for (const field of requiredFields) {
+                const input = document.getElementById(field);
+                if (!input.value.trim()) {
+                    let fieldName = input.previousElementSibling.textContent.trim();
+                    alert(`يرجى ملء حقل ${fieldName}`);
+                    input.focus();
+                    return;
+                }
+            }
+            
+            // عرض مؤشر التحميل
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>جاري الإرسال...</span>';
+            loadingElement.style.display = 'block';
+            
+            let productPrice = basePrice * quantity;
+            const totalPriceValue = productPrice + shippingPrice;
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value.trim(),
+                lastName: document.getElementById('lastName').value.trim(),
+                state: selectedState,
+                city: document.getElementById('city').value.trim(),
+                phone: cleanPhone,
+                quantity: quantity,
+                productPrice: productPrice,
+                shippingPrice: shippingPrice,
+                totalPrice: totalPriceValue,
+                timestamp: new Date().toLocaleString('ar-EG'),
+                deviceType: /Mobi|Android/i.test(navigator.userAgent) ? 'هاتف' : 'كمبيوتر'
+            };
+            
+            try {
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyHqN7U1I5dwetdXeLX-plvhwoxJdNs0cUJ6oTXJIWDCNGcdxfT9XX6Cn0nnF1YkVMePg/exec';
+                
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain;charset=utf-8',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    document.getElementById('orderForm').querySelectorAll('.form-group, .quantity-section, .price-calc').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    
+                    submitBtn.style.display = 'none';
+                    loadingElement.style.display = 'none';
+                    confirmationMessage.style.display = 'block';
+                    
+                    confirmationMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    document.getElementById('orderForm').reset();
+                    quantity = 1;
+                    selectedState = "";
+                    shippingPrice = 0;
+                    updatePrice();
+                    
+                } else {
+                    throw new Error('حدث خطأ في الخادم');
+                }
+            } catch (error) {
+                alert(`عذراً! حدث خطأ أثناء إرسال الطلب: ${error.message}\n\nيرجى المحاولة مرة أخرى.`);
+                
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i><span>تأكيد الطلب الآن</span>';
+                loadingElement.style.display = 'none';
+            }
+        });
+        
+        // تحسين تجربة الهاتف
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', function() {
+                document.body.style.fontSize = '16px';
+            });
+        });
+        
+        // تحسين لوحة المفاتيح على الهواتف
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').substring(0, 10);
+            });
+        });
+        
+        // تبديل تلقائي للصور
+        let slideInterval = setInterval(() => {
+            updateGallery(currentImageIndex + 1);
+        }, 5000);
+        
+        mainImageContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        mainImageContainer.addEventListener('touchstart', () => clearInterval(slideInterval));
+        mainImageContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                updateGallery(currentImageIndex + 1);
+            }, 5000);
+        });
+        
+        // تهيئة السعر عند التحميل
+        updatePrice();
+        
+        // إضافة تأثيرات للمفاتيح عند التركيز
+        document.querySelectorAll('input, select').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-5px)';
+            });
+            
+            element.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
